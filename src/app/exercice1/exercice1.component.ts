@@ -7,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Exercice1Component implements OnInit {
   public compteur: number = 0; 
-
-  constructor() { }
+  public result:number ;
+  
+  constructor() {
+    this.result = this.compteur ;
+   }
 
   ngOnInit() {
   }
+
+  public miseAjourCompteur(event){
+    console.log(event);
+    this.compteur = event.valeur1 ;
+    this.result = this.compteur ;
+  }
+
 
 }
